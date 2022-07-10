@@ -11,6 +11,7 @@ import * as memoryUsage from './memory-usage';
 import * as openConfig from './open-config';
 import * as switchSourceHeader from './switch-source-header';
 import * as typeHierarchy from './type-hierarchy';
+import * as ThreeC from './3c';
 
 export const clangdDocumentSelector = [
   {scheme: 'file', language: 'c'},
@@ -61,7 +62,7 @@ export class ClangdContext implements vscode.Disposable {
   async activate(globalStoragePath: string, outputChannel: vscode.OutputChannel,
                  workspaceState: vscode.Memento) {
     const clangdPath =
-        await install.activate(this, globalStoragePath, workspaceState);
+        "/home/vrajoo/checkedc-llvm-project/llvm/cmake-build-debug/bin/3Cclangd";
     if (!clangdPath)
       return;
 
@@ -155,12 +156,14 @@ export class ClangdContext implements vscode.Disposable {
     inlayHints.activate(this);
     memoryUsage.activate(this);
     ast.activate(this);
+    ThreeC.activate(this);
     openConfig.activate(this);
     this.subscriptions.push(this.client.start());
     console.log('Clang Language Server is now active!');
     fileStatus.activate(this);
     switchSourceHeader.activate(this);
     configFileWatcher.activate(this);
+    
   }
 
   get visibleClangdEditors(): vscode.TextEditor[] {
