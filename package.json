@@ -5,7 +5,7 @@
     "version": "0.0.1",
     "publisher": "Purs3Lab",
     "license": "MIT",
-    "homepage": "https://purs3lab.github.io/",
+    "homepage": "https://purs3lab.github.io/3clsp",
     "icon": "purs3lab-3.png",
     "engines": {
         "vscode": "^1.65.0"
