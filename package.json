@@ -2,7 +2,7 @@
     "name": "3clsp",
     "displayName": "3clsp",
     "description": "LSP extension for 3C",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "publisher": "Purs3Lab",
     "license": "MIT",
     "homepage": "https://purs3lab.github.io/3clsp",
