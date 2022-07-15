@@ -82,13 +82,13 @@
         ],
         "configuration": {
             "type": "object",
-            "title": "clangd",
+            "title": "3Cclangd",
             "properties": {
                 "clangd.path": {
                     "type": "string",
-                    "default": "clangd",
+                    "default": "3Cclangd",
                     "scope": "machine-overridable",
-                    "description": "The path to clangd executable, e.g.: /usr/bin/clangd."
+                    "description": "The path to 3Cclangd executable, e.g.: /usr/bin/3Cclangd."
                 },
                 "clangd.arguments": {
                     "type": "array",
