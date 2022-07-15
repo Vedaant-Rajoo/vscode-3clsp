@@ -84,7 +84,7 @@
             "type": "object",
             "title": "3Cclangd",
             "properties": {
-                "clangd.path": {
+                "3clsp.path": {
                     "type": "string",
                     "default": "3Cclangd",
                     "scope": "machine-overridable",

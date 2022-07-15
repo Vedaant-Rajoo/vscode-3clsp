@@ -61,7 +61,7 @@ export class ClangdContext implements vscode.Disposable {
 
   async activate(globalStoragePath: string, outputChannel: vscode.OutputChannel,
                  workspaceState: vscode.Memento) {
-    const clangdPath = config.get<string>('path');
+    const clangdPath = vscode.workspace.getConfiguration('3clsp').get<string>('path');
     if (!clangdPath)
       return;
 
