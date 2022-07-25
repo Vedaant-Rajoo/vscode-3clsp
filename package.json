@@ -48,6 +48,7 @@
     "dependencies": {
         "@clangd/install": "0.1.4",
         "abort-controller": "^3.0.0",
+        "fs-extra": "^10.1.0",
         "vscode-languageclient": "7.1.0-next.1"
     },
     "devDependencies": {
@@ -250,6 +251,12 @@
                 "category": "clangd",
                 "title": "Run 3C on this project",
                 "icon": "$(gear)"
+            },
+            {
+                "command": "clangd.backup",
+                "category": "clangd",
+                "title": "Backup This Project",
+                "icon": "$(cloud-download)"
             }
         ],
         "keybindings": [
