@@ -1,27 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
  
-## [Unreleased] - 2022-07-20
- - Backup and Restore feature to be added.
-### Changed
- 
-### Fixed
- 
-## [0.2.1] - 2022-07-15
-  
-Minor Patch Fix
- 
-### Added
+## Version 0.2.1: July 15, 2022
 
-- Added `PATH` settings to leverage the 3Cclangd server.
- 
-### Changed
-  
-- Now the server executable can be changed at the user's expense.
- 
-### Fixed
- 
-- [PROJECTNAME-TTTT](http://tickets.projectname.com/browse/PROJECTNAME-TTTT)
-  PATCH Add logic to runsheet teaser delete to delete corresponding
-  schedule cards.
- 
+ * Minor Patch Fixes
+ * Added the `PATH` to 3Cclangd executable settings.
+ * Fix: Server Restart not working automatically.   
+
