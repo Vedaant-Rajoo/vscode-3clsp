@@ -61,7 +61,7 @@ export class ClangdContext implements vscode.Disposable {
 
   async activate(globalStoragePath: string, outputChannel: vscode.OutputChannel,
                  workspaceState: vscode.Memento) {
-    const clangdPath = "/home/vrajoo/checkedc-llvm-project/llvm/cmake-build-debug/bin/3Cclangd";
+    const clangdPath = vscode.workspace.getConfiguration('3clsp').get<string>('path');
     if (!clangdPath)
       return;
 
