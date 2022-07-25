@@ -257,6 +257,12 @@
                 "category": "clangd",
                 "title": "Backup This Project",
                 "icon": "$(cloud-download)"
+            },
+            {
+                "command": "clangd.restore",
+                "category": "clangd",
+                "title": "Restore the Project",
+                "icon": "$(refresh)"   
             }
         ],
         "keybindings": [

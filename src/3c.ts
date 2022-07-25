@@ -33,6 +33,27 @@ export function activate(
                 })
             }
         );
+        let restore = vscode.commands.registerTextEditorCommand(
+            'clangd.restore',async (editor,_edit) => {
+                if (!vscode.workspace.workspaceFolders) {
+                    vscode.window.showInformationMessage("Open a folder/workspace first");
+                    return;
+                }
+                vscode.window.showInformationMessage('Restoring the Project');
+                let cuPath = vscode.workspace.workspaceFolders[0].uri.path;
+                let oneLessPath = cuPath.substring(0,cuPath.lastIndexOf('/'));
+                let projectName = cuPath.substring(cuPath.lastIndexOf('/'),cuPath.length);
+                let backupPath = oneLessPath+'/.backup'+projectName;
+                fse.emptyDir(cuPath,(err: any) => {
+                    if (err) return console.error(err)
+                    console.log('success!')
+                });
+                fse.copy(backupPath,cuPath,(err: any) =>{
+                    if(err) return console.error(err)
+                    console.log('success');
+                });
+            }
+        )
         let disposable = vscode.commands.registerTextEditorCommand(
             'clangd.run3c', async (editor,_edit) => {
                 const converter = context.client.code2ProtocolConverter;
@@ -51,7 +72,7 @@ export function activate(
 
         );
 
-        context.subscriptions.push(disposable,backup);
+        context.subscriptions.push(disposable,backup,restore);
     
 }
 
