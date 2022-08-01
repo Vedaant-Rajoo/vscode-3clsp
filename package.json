@@ -2,10 +2,10 @@
     "name": "3clsp",
     "displayName": "3clsp",
     "description": "LSP extension for 3C",
-    "version": "0.0.1",
+    "version": "0.2.1",
     "publisher": "Purs3Lab",
     "license": "MIT",
-    "homepage": "https://purs3lab.github.io/",
+    "homepage": "https://purs3lab.github.io/3clsp",
     "icon": "purs3lab-3.png",
     "engines": {
         "vscode": "^1.65.0"
@@ -48,6 +48,7 @@
     "dependencies": {
         "@clangd/install": "0.1.4",
         "abort-controller": "^3.0.0",
+        "fs-extra": "^10.1.0",
         "vscode-languageclient": "7.1.0-next.1"
     },
     "devDependencies": {
@@ -82,13 +83,13 @@
         ],
         "configuration": {
             "type": "object",
-            "title": "clangd",
+            "title": "3Cclangd",
             "properties": {
-                "clangd.path": {
+                "3clsp.path": {
                     "type": "string",
-                    "default": "clangd",
+                    "default": "3Cclangd",
                     "scope": "machine-overridable",
-                    "description": "The path to clangd executable, e.g.: /usr/bin/clangd."
+                    "description": "The path to 3Cclangd executable, e.g.: /usr/bin/3Cclangd."
                 },
                 "clangd.arguments": {
                     "type": "array",
@@ -250,6 +251,18 @@
                 "category": "clangd",
                 "title": "Run 3C on this project",
                 "icon": "$(gear)"
+            },
+            {
+                "command": "clangd.backup",
+                "category": "clangd",
+                "title": "Backup This Project",
+                "icon": "$(cloud-download)"
+            },
+            {
+                "command": "clangd.restore",
+                "category": "clangd",
+                "title": "Restore the Project",
+                "icon": "$(refresh)"   
             }
         ],
         "keybindings": [
