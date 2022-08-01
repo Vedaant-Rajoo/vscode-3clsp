@@ -2,7 +2,7 @@
     "name": "3clsp",
     "displayName": "3clsp",
     "description": "LSP extension for 3C",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "publisher": "Purs3Lab",
     "license": "MIT",
     "homepage": "https://purs3lab.github.io/3clsp",
@@ -262,7 +262,7 @@
                 "command": "clangd.restore",
                 "category": "clangd",
                 "title": "Restore the Project",
-                "icon": "$(refresh)"   
+                "icon": "$(refresh)"
             }
         ],
         "keybindings": [
